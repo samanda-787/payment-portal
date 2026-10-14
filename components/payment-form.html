@@ -1,0 +1,70 @@
+<section class="py-5 bg-light" id="payment-form">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Omba Control Number</h2>
+      <p class="section-subtitle">Jaza fomu hapa chini ili kupata Control Number ya malipo</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <div class="card payment-card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="mb-0"><i class="bi bi-file-earmark-text"></i> Fomu ya Malipo</h5>
+          </div>
+          <div class="card-body p-4">
+            <form id="gepgForm">
+              <div class="mb-3">
+                <label for="serviceType" class="form-label">Aina ya Huduma</label>
+                <select class="form-select" id="serviceType" required>
+                  <option value="">-- Chagua Huduma --</option>
+                  <option value="kodi">Kodi ya Mapato</option>
+                  <option value="maji">Bili ya Maji</option>
+                  <option value="umeme">Bili ya Umeme</option>
+                  <option value="shule">Ada ya Shule</option>
+                  <option value="leseni">Leseni ya Biashara</option>
+                  <option value="afya">Huduma za Afya</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="payerName" class="form-label">Jina la Mlipaji</label>
+                <input type="text" class="form-control" id="payerName" placeholder="Mfano: Juma Mohamed" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="payerPhone" class="form-label">Namba ya Simu</label>
+                <input type="tel" class="form-control" id="payerPhone" placeholder="Mfano: 0712345678" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="amount" class="form-label">Kiasi (TZS)</label>
+                <div class="input-group">
+                  <span class="input-group-text">TZS</span>
+                  <input type="number" class="form-control" id="amount" placeholder="Ingiza kiasi" min="100" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="description" class="form-label">Maelezo</label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Maelezo ya bili (si lazima)"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 btn-lg">
+                <i class="bi bi-send"></i> Omba Control Number
+              </button>
+            </form>
+
+            <!-- Matokeo ya Control Number -->
+            <div id="controlNumberResult" class="alert alert-success mt-4 d-none">
+              <h5><i class="bi bi-check-circle-fill"></i> Control Number Yako:</h5>
+              <h3 class="text-center mb-2" id="generatedControlNumber">-</h3>
+              <p class="mb-0 text-center small">
+                Tumia namba hii kulipa kupitia M-Pesa, Tigo Pesa, Airtel Money, au benki yoyote.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
